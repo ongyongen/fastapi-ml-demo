@@ -1,8 +1,8 @@
 import base64
 from google.cloud import storage
 from datetime import datetime
-from constants import GCS_STORAGE_CLIENT, GCS_BUCKET_NAME
-from schema import Inference, Dog
+from app.constants import GCS_STORAGE_CLIENT, GCS_BUCKET_NAME
+from app.schema import Inference, Dog
 
 def put_img_into_bucket(base64_image_string, gcs_img_folder_path, animal_type):  
     """

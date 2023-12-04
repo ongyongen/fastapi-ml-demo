@@ -1,4 +1,4 @@
-from constants import *
+from app.constants import *
 from pydantic import BaseModel
 
 class CreateDogSchema(BaseModel):

@@ -1,11 +1,11 @@
-from fastapi import HTTPException, BackgroundTasks
 from firebase import db
-from utils import put_img_into_bucket, create_inference_record, create_dog_record
-from schema import CreateDogSchema
-from constants import *
+from fastapi import HTTPException, BackgroundTasks
+from app.utils import put_img_into_bucket, create_inference_record, create_dog_record
+from app.schema import CreateDogSchema
+from app.constants import *
 from dotenv import load_dotenv
-from utils import *
-from model import run_pipeline
+from app.utils import *
+from app.ml_model import run_pipeline
 from fastapi import APIRouter
 
 load_dotenv() 

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from transformers import pipeline
-from constants import DOG_EMOTION_ML_MODEL_REF, DOG_EMOTION_MODEL_NAME, DOG_EMOTION_MODEL_TYPE
+from app.constants import DOG_EMOTION_ML_MODEL_REF, DOG_EMOTION_MODEL_NAME, DOG_EMOTION_MODEL_TYPE
 
 ml_models = {}
 

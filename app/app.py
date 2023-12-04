@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from dog_api import api_router
-from model import lifespan
+from app.dog_api import api_router
+from app.ml_model import lifespan
 
 app = FastAPI(lifespan=lifespan)
 
