@@ -1,20 +1,23 @@
-from app.constants import *
+from app.constants import INFERENCE_TIMESTAMP, INFERENCE_IMAGE, \
+    INFERENCE_DETECTED_EMOTION, INFERENCE_CONFIDENCE_EMOTION, \
+    DOG_NAME, DOG_INFERENCES
 from pydantic import BaseModel
 
+
 class CreateDogSchema(BaseModel):
-    dog_id : str
-    name : str
-    image : str
+    dog_id: str
+    name: str
+    image: str
 
 
 class Inference:
     def __init__(
-            self, 
-            timestamp, 
-            image, 
-            detected_emotion, 
-            confidence_emotion
-        ):
+        self,
+        timestamp,
+        image,
+        detected_emotion,
+        confidence_emotion
+    ):
         self.timestamp = timestamp
         self.image = image
         self.detected_emotion = detected_emotion
@@ -22,24 +25,24 @@ class Inference:
 
     def to_dict(self):
         return {
-            INFERENCE_TIMESTAMP : self.timestamp,
-            INFERENCE_IMAGE : self.image,
-            INFERENCE_DETECTED_EMOTION : self.detected_emotion,
-            INFERENCE_CONFIDENCE_EMOTION : self.confidence_emotion
+            INFERENCE_TIMESTAMP: self.timestamp,
+            INFERENCE_IMAGE: self.image,
+            INFERENCE_DETECTED_EMOTION: self.detected_emotion,
+            INFERENCE_CONFIDENCE_EMOTION: self.confidence_emotion
         }
+
 
 class Dog:
     def __init__(
-            self, 
-            name, 
-            inferences
-        ):
+        self,
+        name,
+        inferences
+    ):
         self.name = name
         self.inferences = inferences
 
     def to_dict(self):
         return {
-            DOG_NAME : self.name,
-            DOG_INFERENCES : self.inferences
+            DOG_NAME: self.name,
+            DOG_INFERENCES: self.inferences
         }
-    

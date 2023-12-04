@@ -4,7 +4,7 @@ from firebase_admin import credentials
 from firebase_admin import firestore
 from dotenv import load_dotenv
 
-load_dotenv() 
+load_dotenv()
 
 service_account_key = {
     "type": os.environ.get("TYPE"),
@@ -15,7 +15,8 @@ service_account_key = {
     "client_id": os.environ.get("CLIENT_ID"),
     "auth_uri": os.environ.get("AUTH_URI"),
     "token_uri": os.environ.get("TOKEN_URI"),
-    "auth_provider_x509_cert_url": os.environ.get("AUTH_PROVIDER_X509_CERT_URL"),
+    "auth_provider_x509_cert_url":
+        os.environ.get("AUTH_PROVIDER_X509_CERT_URL"),
     "client_x509_cert_url": os.environ.get("CLIENT_X509_CERT_URL"),
 }
 
